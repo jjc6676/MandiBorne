@@ -13,10 +13,10 @@ header('Content-type: application/json');
 require_once('php-mailer/PHPMailerAutoload.php');
 
 // Step 1 - Enter your email address below.
-$email = 'jjc6676@gmail.com';
+$email = 'jasonchoplin@gmail.com';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
-$debug = 0;
+$debug = 2;
 
 $subject = $_POST['subject'];
 
@@ -49,13 +49,13 @@ try {
 
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
-	//$mail->IsSMTP();                                         // Set mailer to use SMTP
-	//$mail->Host = 'mail.yourserver.com';				       // Specify main and backup server
-	//$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	//$mail->Username = 'user@example.com';                    // SMTP username
-	//$mail->Password = 'secret';                              // SMTP password
-	//$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
-	//$mail->Port = 587;   								       // TCP port to connect to
+$mail->IsSMTP(); // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';	// Specify main and backup server
+$mail->SMTPAuth = true; // Enable SMTP authentication
+$mail->Username = 'jjc6676@gmail.com'; // SMTP username
+$mail->Password = 'Perinoid2016!'; // SMTP password
+$mail->SMTPSecure = 'tls'; // Enable encryption, ‘ssl’ also accepted
+$mail->Port = 587; // TCP port to connect to
 
 	$mail->AddAddress($email);	 						       // Add another recipient
 
